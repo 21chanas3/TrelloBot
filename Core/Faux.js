@@ -86,7 +86,7 @@ module.exports = class Faux extends Discord.Client {
   }
 
   login() {
-    return super.login(this.config.discordToken)
+    return super.login(process.env.BOT_TOKEN)
   }
 
   apiKey(name) {
