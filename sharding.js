@@ -4,7 +4,7 @@ const config = require('./config.json')
 const pkg = require('./package.json')
 
 const manager = new Discord.ShardingManager(`${__dirname}/${pkg.main}`, {
-  token: config.discordToken,
+  token: process.env.BOT_TOKEN,
   totalShards: config.sharding.count
 })
 
